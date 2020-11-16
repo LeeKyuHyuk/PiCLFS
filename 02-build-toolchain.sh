@@ -8,7 +8,7 @@ set -o errexit
 umask 022
 
 export LC_ALL=POSIX
-export PARALLEL_JOBS=`cat /proc/cpuinfo | grep cores | wc -l`
+export PARALLEL_JOBS=1
 export CONFIG_LINUX_ARCH="arm64"
 export CONFIG_TARGET="aarch64-linux-gnu"
 export CONFIG_HOST=`echo ${MACHTYPE} | sed -e 's/-[^-]*/-cross/'`
